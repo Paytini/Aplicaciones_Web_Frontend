@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import BuscarAlumno from '../components/BusquedaAvanzada.vue';
+import Login from '../views/LoginGoogle.vue';
 
 const routes = [
   { path: '/busqueda', component: BuscarAlumno, name: 'Busqueda' },
-  { path: '/:pathMatch(.*)*', redirect: '/busqueda' }
+  { path: '/login', component: Login, name: 'Login' },
+  { path: '/:pathMatch(.*)*', redirect: '/login' }
 ];
 
 const router = createRouter({
